@@ -56,7 +56,7 @@ export default function GeneratingBoard({ topic }) {
 
   return (
     <BoardFrame label={`Preparing a lesson on ${topic}`}>
-      <InkFillText text={topic} className="w-[70%] font-hand text-48 max-md:w-[90%]" />
+      <InkFillText text={topic} className="w-[70%] font-hand text-48 text-balance wrap-anywhere max-md:w-[90%] max-sm:w-full" />
 
       <div className="flex flex-col items-center gap-[1.6vh]">
         <ol className="flex flex-wrap items-center justify-center gap-1 max-sm:grid max-sm:grid-cols-2" aria-label="Progress">

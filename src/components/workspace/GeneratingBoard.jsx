@@ -59,7 +59,7 @@ export default function GeneratingBoard({ topic }) {
       <InkFillText text={topic} className="w-[70%] font-hand text-48 max-md:w-[90%]" />
 
       <div className="flex flex-col items-center gap-[1.6vh]">
-        <ol className="flex flex-wrap items-center justify-center gap-1" aria-label="Progress">
+        <ol className="flex flex-wrap items-center justify-center gap-1 max-sm:grid max-sm:grid-cols-2" aria-label="Progress">
           {STAGES.map((name, i) => {
             const done = i < stage;
             const current = i === stage;
@@ -68,7 +68,7 @@ export default function GeneratingBoard({ topic }) {
                 key={name}
                 aria-current={current ? "step" : undefined}
                 className={cn(
-                  "relative flex h-[4vh] items-center gap-1.5 rounded-full px-[1vw] text-19 transition-colors duration-500 max-md:h-[3vh] max-md:px-[2vw] max-sm:h-[4.4vh] max-sm:px-[3vw]",
+                  "relative flex h-[4vh] items-center justify-center gap-1.5 rounded-full px-[1vw] text-19 transition-colors duration-500 max-md:h-[3vh] max-md:px-[2vw] max-sm:h-[4.4vh] max-sm:px-[3vw]",
                   current ? "text-foreground" : done ? "text-muted-foreground" : "text-muted-foreground/55"
                 )}
               >
